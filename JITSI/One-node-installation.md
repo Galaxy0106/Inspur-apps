@@ -34,5 +34,7 @@ echo "deb https://download.jitsi.org stable/" > /etc/apt/sources.list.d/jitsi-st
 sudo apt update
 sudo apt -y install jitsi-meet
 ```
+安装期间指定域名为IP地址  
+默认生成SSL证书即可
 # 使用
 在主机浏览器上输入虚拟机Host-only的IP，新建会议进行测试
