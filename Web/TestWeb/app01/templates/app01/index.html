@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="5">
+<title>Online Object Detection</title>
+<style>
+#head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 90px;
+}
+
+#head_text {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.image_box {
+  float: left;
+  width: 50%;
+}
+
+.title{
+    padding-top: 12px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+
+#image1_box li {
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+
+#image2_box li {
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+
+.content {
+    width:80%;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.img-wrap {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.img-box img {
+    position: relative;
+    width: 100%;
+    top: 100%;
+}
+
+</style>
+</head>
+<body οnlοad="document.body.scrollTop = document.body.scrollHeight">
+
+<ul id="head">
+  <li id="head_text">Online Object Detection</li>
+</ul>
+
+<ul id="overview">
+    <li id="image1_box" class="image_box">
+        <h1>Processed image</h1>
+        <ul id="image1s">
+            <li>
+                {% for image1 in image1_list %}
+                <div class="content">
+                    <div class="img-wrap">
+                        <div class="img-box">
+                            <img src="{% static image1 %}">
+                        </div>
+                    </div>
+                    <div class="title">{% static image1 %}</div>
+                </div>
+                {% endfor %}
+            </li>
+        </ul>
+    </li>
+
+
+    <li id="image2_box" class="image_box">
+        <h1>Processed image</h1>
+        <ul id="image1s">
+            <li>
+                {% for image2 in image2_list %}
+                <div class="content">
+                    <div class="img-wrap">
+                        <div class="img-box">
+                            <img src="{% static image2 %}">
+                        </div>
+                    </div>
+                    <div class="title">{%static image2 %}</div>
+                </div>
+                {% endfor %}
+            </li>
+        </ul>
+    </li>
+
+</ul>
+
+
+
+
+<!-- <div class="image">
+    <h1>Unprocessed image</h1>>
+    <ul>
+        <li><img src="../../upload/test.jpg"></li>
+    </ul>
+        <script>
+            x = 0
+            function countSecond() 
+            {   　
+                x = x+1
+                // document ("<p>QAQ</p>");
+                document.getElementById("displayBox").value=x 
+                // var newText = document.createTextNode("QAQ")
+                // var image1s = document.getElementsByClassName("image1s")
+                // image1s.appendChild(newText)
+                // setTimeout("countSecond()", 1000)
+            }
+            // 执行函数
+            countSecond()
+        </script>
+    </div>
+</div> -->
+
+<!-- <div class="image">
+    <h1>Processed image</h1>>
+    <div class="image2s"></div>
+</div> -->
+
+</body>
+</html>

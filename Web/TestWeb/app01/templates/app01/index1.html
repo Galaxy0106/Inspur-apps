@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Object Detection</title>
+<style>
+#head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 90px;
+}
+
+#head_text {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.image_box {
+  float: left;
+  width: 50%;
+}
+
+.image1 {
+    list-style: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.image1 img{
+    width: 600px;
+    height: 400px;
+}
+
+</style>
+</head>
+<body>
+
+<ul id="head">
+  <li id="head_text">Online Object Detection</li>
+</ul>
+
+<!-- {% for image in image_list %}
+    <p>{{ image }}</p> 
+{% endfor %} -->
+<p> {{ image_list }} </p>
+
+
+</body>
+</html>
